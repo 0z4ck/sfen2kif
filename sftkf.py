@@ -42,11 +42,18 @@ for move in usimoves:
         pass
     elif move=="moves":
         pass
+    elif move=="resign":
+        pass
+    elif move=="position":
+        pass
+    elif move=="startpos":
+        pass
     elif move[1]=="*":
         piece = move[0]
         c += 1 
         board[sfd[move[3]]][int(move[2])-1] = piece
         m = "  {} {}{}{}打   ( 0:00/00:00:00)".format(c,zenkaku[int(move[2])-1],suji[sfd[move[3]]],koma[piece])
+        moji += m + "\n"
     else:
         piece = board[sfd[move[1]]][int(move[0])-1]
         if move[-1]=="+":
@@ -61,8 +68,7 @@ for move in usimoves:
         board[sfd[move[1]]][int(move[0])-1] = ""
         c += 1 
         m = "  {} {}{}{}({}{})   ( 0:00/00:00:00)".format(c,zenkaku[int(move[2])-1],suji[sfd[move[3]]],koma[piece.upper()],move[0],sfd[move[1]]+1)
-    #print m
-    moji += m + "\n"
+        moji += m + "\n"
 
 
 
