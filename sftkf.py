@@ -47,6 +47,7 @@ for move in usimoves:
     elif move=="startpos":
         pass
     elif move=="resign":
+        c += 1
         m = "  {} 投了   ( 0:00/00:00:00)".format(c)
         moji += m + "\n"
     elif move[1]=="*":
